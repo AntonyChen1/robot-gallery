@@ -1,3 +1,12 @@
+# npx create-react-app robot-gallery --template typescript
+### 1. If use json format in the project, below 2 configs must be in the `tsconfig.json`\
+    "moduleResolution": "node",\
+    "resolveJsonModule": true,
+### 2.npm install typescript-plugin-css-modules --save-dev 
+Dev only, there will be "devDependcies" in the package.json
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
