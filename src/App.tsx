@@ -5,14 +5,16 @@ import Robot from './components/robot';
 //ts don't konw the css file, need add declaration in the *.d.ts. 
 //This file will neither be compiled or packgaged by webpack
 import styles from './App.module.css';
+import ShoppingCart from './components/ShoppingCart';
 
 function App() {
   return (
     <div className={styles.app}>
       <div className={styles.appHeader}>
-        <img src={logo} className={styles.appLogo} alt="logo"/>
+        <img src={logo} className={styles.appLogo} alt="logo" />
         <h1>This is a react project created by Antony</h1>
       </div>
+      <ShoppingCart />
       <div className={styles.robotList}>
         {robots.map(r => (
           <Robot id={r.id} name={r.name} email={r.email} />

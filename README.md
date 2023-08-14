@@ -1,10 +1,18 @@
 # npx create-react-app robot-gallery --template typescript
-### 1. If use json format in the project, below 2 configs must be in the `tsconfig.json`\
-    "moduleResolution": "node",\
+### 1. If use json format in the project, below 2 configs must be in the `tsconfig.json`
+    "moduleResolution": "node",
     "resolveJsonModule": true,
-### 2.npm install typescript-plugin-css-modules --save-dev 
-Dev only, there will be "devDependcies" in the package.json
-
+### 2. npm install typescript-plugin-css-modules --save-dev 
+- Dev only, there will be "devDependcies" in the package.json
+- This plugin is used for css intellisense
+### 3. Props and State
+Props is used for passing data to other components\
+- From parent component to current.
+- It is immutable. Confirm data changing by comparing address.
+State is used for passing data inner component\
+- State is private
+- Call `setState()` to render data, data changing is asynchronous, can't depend on the previous value.
+- Initialized in the `constructor()` only
 
 
 # Getting Started with Create React App
