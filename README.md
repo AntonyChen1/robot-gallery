@@ -6,13 +6,34 @@
 - Dev only, there will be "devDependcies" in the package.json
 - This plugin is used for css intellisense
 ### 3. Props and State
-Props is used for passing data to other components\
+Props is used for passing data to other components
 - From parent component to current.
 - It is immutable. Confirm data changing by comparing address.
-State is used for passing data inner component\
+
+State is used for passing data inner component
 - State is private
 - Call `setState()` to render data, data changing is asynchronous, can't depend on the previous value.
-- Initialized in the `constructor()` only
+- State can be Initialized in the `constructor()` only, updated in other place
+### 4. Can't find keyword `this`
+- Add `this.onClick() = this.onClick().bind(this)` in constructor()
+- Use arrow method `onClick() = () =>{ this.xxx }`
+### 5. React event `e: React.MouseEvent<HTMLButtonElement, MouseEvent>`
+- `e.target`: the element which event happened on
+- `e.currentTarget`: the element which event binding on
+
+```
+npm install react-icons
+import {FiShoppingCart} from 'react-icons/fi'
+<FiShoppingCart />
+if ((e.target as HTMLElement).nodeName === "SPAN") {
+    this.setState({ isOpen: !this.state.isOpen });
+}
+```
+
+
+
+
+
 
 
 # Getting Started with Create React App
