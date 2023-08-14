@@ -14,6 +14,15 @@ State is used for passing data inner component
 - State is private
 - Call `setState()` to render data, data changing is asynchronous, can't depend on the previous value.
 - State can be Initialized in the `constructor()` only, updated in other place
+
+ ```
+onClick={ () => {
+    this.setState(
+        (preState, preProps) => {return {count: preState.count + 1}}, 
+        () => {console.log(count, this.state.count)}
+    )
+}};
+```
 ### 4. Can't find keyword `this`
 - Add `this.onClick() = this.onClick().bind(this)` in constructor()
 - Use arrow method `onClick() = () =>{ this.xxx }`
@@ -29,7 +38,11 @@ if ((e.target as HTMLElement).nodeName === "SPAN") {
     this.setState({ isOpen: !this.state.isOpen });
 }
 ```
-
+### 6. Life syscle
+- componentDidMount
+- shouldComponentUpdate
+- componentDidUpdate
+- componentWillUnmount
 
 
 
