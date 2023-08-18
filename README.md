@@ -48,6 +48,7 @@ if ((e.target as HTMLElement).nodeName === "SPAN") {
 - Pure function: same results will be returned with same parameters
 
 ### 8. Pass data
+- Use props to pass data
 - Fix props drilling, use context
 
 

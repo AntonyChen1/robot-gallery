@@ -7,11 +7,7 @@ import Robot from './components/robot';
 import styles from './App.module.css';
 import ShoppingCart from './components/ShoppingCart';
 
-interface Props { 
-  // Pass data from parent component, need this property
-  // But if pass to this component's child node, this component is useless
-  // This case is called props drilling(深度注入) 
-  username: string
+interface Props {
 }
 
 interface State {
@@ -19,7 +15,7 @@ interface State {
   count: number
 }
 
-const App: React.FC<Props> = (props) => {
+const App: React.FC = (props) => {
 
   const [count, setCount] = useState<number>(0);
   const [robotGallery, setRobotGallery] = useState<any>([]);
@@ -54,7 +50,6 @@ const App: React.FC<Props> = (props) => {
         <img src={logo} className={styles.appLogo} alt="logo" />
         <h1>This is a react project created by Antony</h1>
       </div>
-      <h2>{props.username}</h2>
       <button onClick={() => {
         setCount(count + 1);
         setCount(count + 1);// only 1 is effected, it is asynchronous
