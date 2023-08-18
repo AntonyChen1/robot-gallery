@@ -47,7 +47,8 @@ if ((e.target as HTMLElement).nodeName === "SPAN") {
 ### 7. Hooks created in 2018, React 16.7
 - Pure function: same results will be returned with same parameters
 
-
+### 8. Pass data
+- Fix props drilling, use context
 
 
 
