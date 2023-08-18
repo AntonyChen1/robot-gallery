@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Robot.module.css";
 import { appContext } from "../index";
 
@@ -10,17 +10,14 @@ interface RobotProps {
 
 // FC functional component
 const Robot: React.FC<RobotProps> = ({ id, name, email }) => {
+    const value = useContext(appContext);
     return (
-        <appContext.Consumer>{
-            (value) => {
-                return <div className={styles.cardContainer}>
-                    <img alt="robot" src={`https://robohash.org/${id}`} />
-                    <h2>{name}</h2>
-                    <p>{email}</p>
-                    <p>Auther: {value.username}</p>
-                </div>
-            }}
-        </appContext.Consumer>
+        <div className={styles.cardContainer}>
+            <img alt="robot" src={`https://robohash.org/${id}`} />
+            <h2>{name}</h2>
+            <p>{email}</p>
+            <p>{value.username}</p>
+        </div>
     );
 }
 

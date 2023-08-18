@@ -50,7 +50,7 @@ if ((e.target as HTMLElement).nodeName === "SPAN") {
 ### 8. Pass data
 - Use props to pass data
 - Fix props drilling, use context
-
+- Use hooks of useContext
 
 
 
