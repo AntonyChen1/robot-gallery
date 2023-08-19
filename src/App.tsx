@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import logo from './assets/images/logo.svg';
 import robots from './mockdata/robots.json';
-import Robot from './components/robot';
+import Robot from './components/Robot';
+import RobotDiscount from './components/RobotDiscount';
 //ts don't konw the css file, need add declaration in the *.d.ts. 
 //This file will neither be compiled or packgaged by webpack
 import styles from './App.module.css';
@@ -59,7 +60,9 @@ const App: React.FC = (props) => {
       {(error && error !== "") && <div>Error occur: {error}</div>}
       {loading ? "Loading, wait a moment please" :
         <div className={styles.robotList}>
-          {robotGallery.map(r => (
+          {robotGallery.map((r, index) => (
+            index % 2 ?
+            <RobotDiscount id={r.id} name={r.name} email={r.email} /> :
             <Robot id={r.id} name={r.name} email={r.email} />
           ))}
         </div>}

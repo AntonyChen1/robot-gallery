@@ -46,6 +46,7 @@ if ((e.target as HTMLElement).nodeName === "SPAN") {
 
 ### 7. Hooks created in 2018, React 16.7
 - Pure function: same results will be returned with same parameters
+- Hooks can only be used in FunctionComponent
 
 ### 8. Pass data
 - Use props to pass data
@@ -56,6 +57,8 @@ if ((e.target as HTMLElement).nodeName === "SPAN") {
   export const appContext = React.createContext(defaultContextValue)\
   const value = useContext(appContext);
 
+### 9. High Order Component
+const hoc = highOrder(wrappedComponent);
 
 
 
