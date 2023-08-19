@@ -2,38 +2,28 @@ import React, { useContext } from "react";
 import styles from "./Robot.module.css";
 import { appContext, appSetStateContext } from "../AppState";
 import ShoppingCart from "./ShoppingCart";
+import { withAddToCart } from "./AddToCart";
 
-interface RobotProps {
-    id: number,
-    name: string,
-    email: string
+export interface RobotProps {
+    id: number;
+    name: string;
+    email: string;
+    addToCart: (id, name) => void;
 }
 
 // FC functional component
-const Robot: React.FC<RobotProps> = ({ id, name, email }) => {
+const Robot: React.FC<RobotProps> = ({ id, name, email, addToCart }) => {
     const value = useContext(appContext);
-    const setState = useContext(appSetStateContext);
-    const addToCart = () => {
-        if (setState) {
-            setState(state => {
-                return {
-                    ...state,
-                    shoppingCart: {
-                        items: [...state.shoppingCart.items, { id, name }]
-                    }
-                }
-            })
-        }
-    }
+
     return (
         <div className={styles.cardContainer}>
             <img alt="robot" src={`https://robohash.org/${id}`} />
             <h2>{name}</h2>
             <p>{email}</p>
             <p>Auther: {value.username}</p>
-            <button onClick={addToCart}>Add to shoppingCart</button>
+            <button onClick={() => addToCart(id, name)}>Add to shoppingCart</button>
         </div>
     );
 }
 
-export default Robot;
+export default withAddToCart(Robot);
