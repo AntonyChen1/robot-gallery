@@ -49,8 +49,16 @@ if ((e.target as HTMLElement).nodeName === "SPAN") {
 
 ### 8. Pass data
 - Use props to pass data
-- Fix props drilling, use context
-- Use hooks of useContext
+- Fix props drilling, use context provider / customer\
+  <appContext.Provider value={defaultContextValue}>\
+  <appContext.Consumer>
+- Use hooks, only works in FunctionComponent\
+  export const appContext = React.createContext(defaultContextValue)\
+  const value = useContext(appContext);
+
+
+
+
 
 
 
