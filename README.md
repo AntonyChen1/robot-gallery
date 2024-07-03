@@ -66,6 +66,7 @@ if ((e.target as HTMLElement).nodeName === "SPAN") {
 ![image](https://github.com/AntonyChen1/robot-gallery/assets/138751151/ac0cbbf0-c6b5-4a51-9a3d-5691ded64e12)
 ![image](https://github.com/AntonyChen1/robot-gallery/assets/138751151/eaec39d1-adc4-4e20-bae1-cff6badd722c)
 ![image](https://github.com/AntonyChen1/robot-gallery/assets/138751151/a7d5879e-65a7-48b1-a988-dfeefa0e8c6b)
+![image](https://github.com/AntonyChen1/robot-gallery/assets/138751151/34248495-a192-41a1-a72b-945abfc0f382)
 
 
 -----------------------------------------------------------------------------------------------------------------------------
