@@ -63,6 +63,7 @@ if ((e.target as HTMLElement).nodeName === "SPAN") {
 - Start with 'withXXX()'
 
 
+![image](https://github.com/AntonyChen1/robot-gallery/assets/138751151/ac0cbbf0-c6b5-4a51-9a3d-5691ded64e12)
 
 
 
